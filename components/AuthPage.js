@@ -17,6 +17,13 @@ const AuthPage = () => {
     <>
       Not signed in <br />
       <button onClick={() => signIn()}>Sign</button>
+      <button
+        onClick={() =>
+          signIn("google", { callbackUrl: "http://localhost:3000/" })
+        }
+      >
+        Sign with Google
+      </button>
     </>
   );
 };
