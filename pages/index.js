@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import AuthPage from "../components/AuthPage";
+import ChatSpeedDial from "../components/ChatSpeedDial";
+import Customization from "../components/Customization";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -14,6 +16,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <AuthPage />
+        <Customization />
+        <ChatSpeedDial />
       </main>
 
       <footer className={styles.footer}>
