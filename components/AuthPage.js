@@ -7,14 +7,14 @@ const AuthPage = () => {
 
   if (session) {
     return (
-      <>
+      <div style={{ textAlign: "center" }}>
         Signed in as {session.user.email} <br />
         <button onClick={() => signOut()}>Sign out</button>
-      </>
+      </div>
     );
   }
   return (
-    <>
+    <div style={{ textAlign: "center" }}>
       Not signed in <br />
       <button onClick={() => signIn()}>Sign</button>
       <button
@@ -24,7 +24,7 @@ const AuthPage = () => {
       >
         Sign with Google
       </button>
-    </>
+    </div>
   );
 };
 

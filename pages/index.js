@@ -1,9 +1,49 @@
+import { Box, Button } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
 import AuthPage from "../components/AuthPage";
+import ChatSpeedDial from "../components/ChatSpeedDial";
+import Customization from "../components/Customization";
+import CustomizeCart from "../components/CustomizeCart";
+import PullDrawer from "../components/PullDrawer";
+import Repeater from "../components/Repeater";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  // const [open, setOpen] = useState(false);
+  // const toggleDrawer = (newOpen) => () => {
+  //   setOpen(newOpen);
+  // };
+
+  // ============Customize Cart Start==============
+  const [property, setProperty] = useState({
+    position: "fixed",
+    height: 200,
+    width: 300,
+    color: "white",
+    border: "1px solid red",
+    background: "blue",
+    right: 10,
+    bottom: 200,
+    left: "100vw",
+  });
+  const showCart = () => {
+    setProperty({
+      position: "fixed",
+      height: 200,
+      width: 300,
+      color: "white",
+      border: "1px solid red",
+      background: "blue",
+      right: 10,
+      bottom: 200,
+      left: "75vw",
+      transition: "1s",
+    });
+  };
+  // ============Customize Cart End================
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,6 +54,14 @@ export default function Home() {
 
       <main className={styles.main}>
         <AuthPage />
+        <Customization />
+        <ChatSpeedDial />
+
+        <Button onClick={showCart}>Show Cart</Button>
+        <Box sx={{ maxWidth: "100vw" }}>
+          <CustomizeCart property={property} setProperty={setProperty} />
+        </Box>
+        <Repeater />
       </main>
 
       <footer className={styles.footer}>
