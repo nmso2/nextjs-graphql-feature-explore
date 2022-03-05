@@ -7,6 +7,7 @@ import ChatSpeedDial from "../components/ChatSpeedDial";
 import Customization from "../components/Customization";
 import CustomizeCart from "../components/CustomizeCart";
 import PullDrawer from "../components/PullDrawer";
+import Repeater from "../components/Repeater";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -60,6 +61,7 @@ export default function Home() {
         <Box sx={{ maxWidth: "100vw" }}>
           <CustomizeCart property={property} setProperty={setProperty} />
         </Box>
+        <Repeater />
       </main>
 
       <footer className={styles.footer}>

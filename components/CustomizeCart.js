@@ -5,16 +5,14 @@ const CustomizeCart = ({ property, setProperty }) => {
     <Box sx={property}>
       <Typography>Data</Typography>
       <Button
+        sx={{ alignItems: "right" }}
         onClick={() =>
           setProperty({
             position: "fixed",
-            height: 200,
-            width: 300,
-            color: "white",
-            border: "1px solid red",
-            background: "blue",
-            right: 10,
-            bottom: 200,
+            height: 0,
+            width: 0,
+            right: 0,
+            bottom: 50,
             left: "100vw",
             transition: "1s",
           })
