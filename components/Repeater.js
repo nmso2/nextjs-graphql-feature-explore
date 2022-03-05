@@ -126,23 +126,13 @@ const Repeater = () => {
           {newInputField.id !== 1 && (
             <div className="col-md-1 input-group input-group-sm m-0 p-0">
               <button
+                onClick={() => deleteNewFeaturesHandler(newInputField.id)}
                 type="button"
                 style={{
                   backgroundColor: "transparent",
                 }}
               >
-                <i
-                  className="fa fa-close ml-0"
-                  onClick={() => deleteNewFeaturesHandler(newInputField.id)}
-                  style={{
-                    cursor: "pointer",
-                    padding: "5px",
-                    backgroundColor: "white",
-                    color: "black",
-                    fontSize: "12px",
-                    borderRadius: "50%",
-                  }}
-                ></i>
+                X
               </button>
             </div>
           )}
